@@ -8,5 +8,6 @@ QCOW2_IMAGE="$1"
 
 qemu-system-x86_64 -enable-kvm \
                    -m 2G \
+                   -cpu host \
                    -hda "$QCOW2_IMAGE" \
                    -vga virtio -display sdl,gl=on
