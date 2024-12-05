@@ -10,7 +10,7 @@ SIZE="$3"
 
 qemu-img create -f qcow2 "$QCOW2_IMAGE" "$SIZE"
 qemu-system-x86_64 -enable-kvm \
-                   -m 2G \
+                   -m 4G \
                    -cdrom "$ISO_PATH" \
                    -hda "$QCOW2_IMAGE" \
                    -boot menu=on \
