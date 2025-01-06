@@ -12,5 +12,6 @@ qemu-system-x86_64 -enable-kvm \
                    -hda "$QCOW2_IMAGE" \
                    -netdev user,id=net0,hostfwd=tcp::"$SSH_PORT"-:22 \
                    -device e1000,netdev=net0 \
-                   -nographic \
-
+                   #-nographic \
+		   -display none -vnc :0 \
+		   
